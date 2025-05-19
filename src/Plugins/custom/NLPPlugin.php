@@ -5,6 +5,7 @@ namespace AdvancePHPSraper\Plugins\custom;
 use AdvancePHPSraper\Core\Scraper;
 use AdvancePHPSraper\Plugins\PluginInterface;
 use DonatelloZa\RakePlus\RakePlus;
+use Exception;
 
 /**
  * NLP plugin for keyword and entity extraction
