@@ -1,0 +1,82 @@
+{
+    "name": "rajpurohithitesh/advance-phpscraper",
+    "description": "An advanced PHP web scraping library with plugin support",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hitesh Rajpurohit",
+            "email": "your-email@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/browser-kit": "^5.4",
+        "symfony/dom-crawler": "^5.4",
+        "symfony/css-selector": "^5.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/event-dispatcher": "^5.4",
+        "symfony/console": "^5.4",
+        "symfony/mime": "^5.4",
+        "monolog/monolog": "^2.0",
+        "league/uri": "^6.5",
+        "donatello-za/rake-php-plus": "^1.0.3",
+        "intervention/image": "^2.7",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-gd": "*",
+        "ext-simplexml": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-fileinfo": "*",
+        "ext-xml": "*",
+        "ext-zlib": "*",
+        "ext-json": "*",
+        "ext-iconv": "*",
+        "ext-pcre": "*",
+        "ext-ctype": "*",
+        "ext-xmlwriter": "*",
+        "ext-tokenizer": "*",
+        "ext-filter": "*",
+        "ext-xmlreader": "*",
+        "ext-sockets": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.0",
+        "symfony/panther": "^2.0",
+        "smalot/pdfparser": "^2.0",
+        "symfony/cache": "^5.4 || ^6.0",
+        "aws/aws-sdk-php": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdvancePHPSraper\\": "src/"
+        }
+    },
+    "suggest": {
+        "symfony/panther": "For headless browser support",
+        "smalot/pdfparser": "For PDF parsing",
+        "symfony/cache": "For caching",
+        "aws/aws-sdk-php": "For cloud deployment"
+    },
+    "scripts": {
+        "scrape": "php bin/scraper",
+        "test": "vendor/bin/phpunit --configuration phpunit.xml"
+    },
+    "bin": [
+        "bin/scraper"
+    ],
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "php-http/discovery": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "platform-check": true
+    }
+}

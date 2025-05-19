@@ -1,0 +1,22 @@
+{
+    "plugins": {
+        "HeadlessPlugin": {
+            "enabled": false
+        },
+        "AsyncPlugin": {
+            "enabled": false
+        },
+        "NLPPlugin": {
+            "enabled": false
+        },
+        "DocumentPlugin": {
+            "enabled": false
+        },
+        "CachePlugin": {
+            "enabled": false
+        },
+        "CloudPlugin": {
+            "enabled": false
+        }
+    }
+}
