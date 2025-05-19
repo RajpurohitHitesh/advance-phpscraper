@@ -1,6 +1,6 @@
 {
     "name": "rajpurohithitesh/advance-phpscraper",
-    "description": "An advanced PHP web scraping library with plugin support",
+    "description": "Advanced PHP web scraping library with plugin support",
     "type": "library",
     "license": "MIT",
     "authors": [
