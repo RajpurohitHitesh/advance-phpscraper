@@ -30,7 +30,8 @@ class CachePlugin implements PluginInterface
         $scraper->enableCache = function () use ($scraper, $cache, $originalGo) {
             $scraper->go = function (string $url, string $method = 'GET', array $params = []) use ($scraper, $cache, $originalGo) {
                 try {
-                    $cacheKey = md5($url . $method . serialize($params));
+                    // Use SHA-256 for secure cache key generation
+                    $cacheKey = hash('sha256', $url . $method . serialize($params));
                     $item = $cache->getItem($cacheKey);
 
                     if ($item->isHit()) {
